@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Messianic Leadership: Principles for Training and Discipleship</title>
+  <meta name="description" content="Core principles of Messianic leadership rooted in Torah and the example of Messiah — servant leadership, teaching, accountability, and community formation." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; text-align:left; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Messianic Leadership: Principles for Training and Discipleship</h2>
+
+    <p>
+      Leadership in Derech Olam arises from servanthood and fidelity to Torah. A Messianic leader models Messiah: humility, teaching, sacrifice, and shepherding. True leadership trains others to serve, protects the flock, and preserves covenant truth.
+    </p>
+
+    <h3 style="color:wheat;">Five Foundational Principles</h3>
+    <ul>
+      <li><strong>Servanthood:</strong> Leading by example, not by title or coercion.</li>
+      <li><strong>Teaching:</strong> Prioritize Scripture, language, and the Mo'edim in training.</li>
+      <li><strong>Accountability:</strong> Transparent leadership subject to community correction.</li>
+      <li><strong>Discipleship:</strong> Train leaders who make leaders — a culture of multiplication.</li>
+      <li><strong>Spiritual Formation:</strong> Encourage prayer, fasting, and personal obedience.</li>
+    </ul>
+
+    <h3 style="color:wheat;">Practical Training Models</h3>
+    <p>
+      Use short apprenticeships, mentoring, and hands-on service rotations. Assess character as much as competence. Create brief modules: Torah foundations, pastoral care, worship, digital ministry, and community logistics.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> Messianic leadership, discipleship, training, servant leadership, Torah-based leadership</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => r.text())
+        .then(d => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = d;
+        })
+        .catch(() => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = "<div style='color:red; padding:4px;'>FAILED TO LOAD " + part + ".html</div>";
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Watch and Pray: Staying Spiritually Alert in the Last Days</title>
+  <meta name="description" content="Encouragement to remain vigilant in prayer and obedience, understanding the importance of watchfulness in end-time events." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header">Loading header...</div>
+  <div id="nav">Loading navigation...</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Watch and Pray: Staying Spiritually Alert in the Last Days</h2>
+
+    <p>
+      Messiah instructs His followers to watch and pray. Remaining spiritually alert protects the faithful from deception and prepares hearts for sudden events. Prayer is a daily rhythm of discernment and alignment with YHVH’s will.
+    </p>
+
+    <h3 style="color:wheat;">Practical Steps</h3>
+    <ul>
+      <li>Set daily times of focused prayer and study</li>
+      <li>Study the Torah and Prophets with an eye to patterns and warnings</li>
+      <li>Maintain fellowship with the covenant community</li>
+      <li>Respond promptly to promptings of the Spirit</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> watch and pray, spiritual alertness, prayer, Messiah, end times vigilance</p>
+  </main>
+
+  <div id="footer">Loading footer...</div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error("Cannot load " + part);
+          return response.text();
+        })
+        .then(function(html){ document.getElementById(part).innerHTML = html; })
+        .catch(function(error){
+          document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

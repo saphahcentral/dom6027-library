@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Learning Paleo-Hebrew: Training Tools and Resources</title>
+  <meta name="description" content="Practical tools, exercises and resources to learn Paleo-Hebrew systematically — alphabeta, pronunciation, practice routines, and study tips for students and teachers." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; text-align:left; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Learning Paleo-Hebrew: Training Tools and Resources</h2>
+
+    <p>
+      Learning Paleo-Hebrew is both a linguistic and spiritual restoration. Because the script is pictographic, each character carries conceptual meaning as well as sound — which makes careful, stepwise training essential. This article outlines accessible tools and a practical training routine for learners of all levels.
+    </p>
+
+    <h3 style="color:wheat;">Essential Tools</h3>
+    <ul>
+      <li>Alphabeta chart (Paleo forms + transliteration)</li>
+      <li>Audio recordings for pronunciation and cadence</li>
+      <li>Practice sheets for writing forms left-to-right in Roman transliteration</li>
+      <li>Short readings (single verse practice) with glosses</li>
+    </ul>
+
+    <h3 style="color:wheat;">A Simple 8-Week Routine</h3>
+    <ol>
+      <li>Weeks 1–2: Learn 3–4 letters per day; trace, say the sound, note the pictograph idea.</li>
+      <li>Weeks 3–4: Begin forming short words and practice common roots.</li>
+      <li>Weeks 5–6: Read short verses, focus on sight-words and structural particles.</li>
+      <li>Weeks 7–8: Translate simple sentences and recite short prayers or Psalms.</li>
+    </ol>
+
+    <h3 style="color:wheat;">Teaching Tips</h3>
+    <p>
+      Use multisensory methods — visuals, spoken repetition, and writing. Keep lessons short (15–25 minutes) and consistent. Connect each letter’s pictograph to a real-world image or Torah concept to deepen memory and meaning.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> Paleo-Hebrew, language training, alphabeta, study tools, transliteration</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => r.text())
+        .then(d => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = d;
+        })
+        .catch(() => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = "<div style='color:red; padding:4px;'>FAILED TO LOAD " + part + ".html</div>";
+        });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free Download: Paleo-Hebrew Prayer Outlines for Daily Use</title>
+  <meta name="description" content="These outlines provide daily prayers in Paleo-Hebrew, helping believers rediscover the depth of biblical devotion.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">Free Download: Paleo-Hebrew Prayer Outlines for Daily Use</h2>
+
+    <p>
+      Prayer has always been central to biblical faith. Rediscovering Paleo-Hebrew prayers 
+      deepens understanding and enriches devotion. Each word carries pictographic layers 
+      that convey spiritual meaning beyond modern translation. Daily outlines guide 
+      believers in praise, thanksgiving, and petition, connecting them to the faith 
+      practices of ancient Israel. For example, the Shema in Paleo-Hebrew emphasizes 
+      hearing and responding with action. Using these outlines aligns the believer 
+      with Scripture in its earliest form, strengthening covenant connection with YHVH. 
+      These resources are tools for both spiritual growth and meaningful restoration 
+      of ancient worship.
+    </p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("FAILED TO LOAD " + part.toUpperCase());
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(e => document.getElementById(part).innerHTML = "<p style='color:red; font-weight:bold;'>" + e.message + "</p>");
+    });
+  </script>
+</body>
+</html>

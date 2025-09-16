@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Earthquakes and Volcanoes: Forces of Nature</title>
+  <meta name="description" content="Exploring earthquakes and volcanoes, their causes, effects, and significance in Earth's geological activity." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Earthquakes and Volcanoes: Forces of Nature</h2>
+
+    <p>
+      Earthquakes and volcanoes are powerful geological processes that shape landscapes and influence life on Earth. Earthquakes occur due to sudden movements along fault lines, releasing energy in the form of seismic waves. Volcanoes form where magma reaches the surface, creating mountains, islands, and lava plains. Both phenomena can cause devastation, yet they also play a role in forming fertile soils and mineral deposits.
+    </p>
+
+    <p>
+      Studying these forces allows scientists to predict potential hazards, improve building codes, and enhance disaster preparedness. Understanding earthquakes and volcanoes provides insight into the planet’s inner dynamics and the balance between destructive and life-supporting natural processes.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> earthquakes, volcanoes, seismic activity, geological processes, natural hazards, Earth's dynamics</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

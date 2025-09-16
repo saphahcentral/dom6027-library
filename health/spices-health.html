@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spices for Wellness: Biblical Wisdom in Everyday Life</title>
+  <meta name="description" content="Using natural spices mentioned in Scripture for health, well-being, and prevention of illness." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Spices for Wellness: Biblical Wisdom in Everyday Life</h2>
+
+    <p>
+      Many spices mentioned in Scripture have properties that aid health. Cinnamon, cumin, and coriander not only enhance flavor but have practical benefits for digestion, circulation, and immunity. Recognizing their value honors YHVH’s design and teaches us how to live in harmony with His creation.
+    </p>
+
+    <h3 style="color:wheat;">Spices to Include in Daily Diet</h3>
+    <ul>
+      <li>Cinnamon: Supports metabolism and heart health</li>
+      <li>Cumin: Improves digestion and nutrient absorption</li>
+      <li>Coriander: Helps regulate blood sugar and cleanse the body</li>
+      <li>Ginger: Anti-inflammatory and strengthens immunity</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> spices, natural remedies, biblical health, Torah wisdom, wellness</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

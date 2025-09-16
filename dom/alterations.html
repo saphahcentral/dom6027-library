@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterations of Derech Olam: From Tree of Life to Tree of Death</title>
+  <meta name="description" content="An in-depth study of how Derech Olam, the Way of YHVH, has been altered through deception, traditions, and false religion—from Beresith to modern times.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header">
+    <h1 style="color:wheat; font-family:monospace; text-align:center;">
+      Derech Olam Ministries
+    </h1>
+  </div>
+
+  <div id="nav">
+    <nav style="text-align:center; margin:10px; font-family:monospace;">
+      <a href="../index.html" style="color:lightgreen; margin:0 10px;">Home</a>
+      <a href="../index2.html" style="color:lightgreen; margin:0 10px;">Resource Library</a>
+      <a href="../about.html" style="color:lightgreen; margin:0 10px;">About</a>
+      <a href="../contact.html" style="color:lightgreen; margin:0 10px;">Contact</a>
+    </nav>
+  </div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">Alterations of Derech Olam: From Tree of Life to Tree of Death</h2>
+
+    <p>
+      From the beginning, humanity was given a choice between two trees:
+      the <strong>Tree of Life</strong>, representing obedience and eternal fellowship
+      with YHVH, and the <strong>Tree of Death</strong>, representing rebellion
+      and corruption. The path of Derech Olam (Way of the World/Way of Eternity)
+      has been altered repeatedly as men chose deception over truth.
+    </p>
+
+    <h3 style="color:wheat;">The First Alteration – Eden</h3>
+    <p>
+      In Beresith 3, the serpent’s lie replaced YHVH’s pure Word with a mixture of
+      truth and deceit. This was the first alteration—substituting the eternal way
+      with a counterfeit. Humanity’s fall was not only disobedience but an
+      <em>altered word</em>, shaping religion with compromise.
+    </p>
+
+    <h3 style="color:wheat;">The Alterations Continue</h3>
+    <ul>
+      <li><strong>Babel</strong> – A false unity built on rebellion, birthing man-made worship systems.</li>
+      <li><strong>Egypt</strong> – A counterfeit of power and idolatry that enslaved YHVH’s people.</li>
+      <li><strong>Exile in Babylon</strong> – The blending of Torah with pagan calendars, names, and traditions.</li>
+      <li><strong>Rabbinic Judaism</strong> – Adding fences around Torah until the command became obscured.</li>
+      <li><strong>Constantinian Christianity</strong> – Replacing Sabbath and Mo’edim with Sunday and Roman festivals.</li>
+      <li><strong>Modern Religion</strong> – Division, denominations, and watered-down messages that obscure covenant truth.</li>
+    </ul>
+
+    <h3 style="color:wheat;">The Humbling Thread</h3>
+    <p>
+      Despite these alterations, YHVH’s covenant thread remained unbroken. From
+      Noach to Avraham, from Mosheh to the Prophets, from Yahusha to His talmidim,
+      the Tree of Life was never removed—it was preserved as a remnant for the
+      humble and obedient.
+    </p>
+
+    <blockquote style="color:lightgreen; border-left:2px solid wheat; padding-left:10px;">
+      “See, I have set before you today life and good, death and evil… therefore choose life,
+      that you and your offspring may live.” (Devarim / Deuteronomy 30:15–19)
+    </blockquote>
+
+    <h3 style="color:wheat;">Our Call Today</h3>
+    <p>
+      Derech Olam Ministries acknowledges these historical alterations not as a curse,
+      but as a humbling effect on each generation. We are called back to the Tree of Life,
+      walking in Torah and Messiah Yahusha without compromise. Each distortion of truth
+      reminds us of our duty to test every spirit, return to the Mo’edim, and honor YHVH’s
+      original covenant design.
+    </p>
+
+    <h3 style="color:wheat;">Conclusion</h3>
+    <p>
+      Alterations of Derech Olam warn us against the religion of men. The Way of YHVH is
+      eternal, unchanged from Beresith to Revelation. To walk in it is to embrace covenant
+      truth, align with Yahusha, and prepare as a bride for His coming reign.
+    </p>
+  </main>
+
+  <div id="footer">
+    <footer style="text-align:center; margin:20px; font-family:monospace; color:lightgreen;">
+      &copy; 2025 Derech Olam Ministries. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(err => {
+          document.getElementById(part).innerHTML =
+            `<div style="color:red; font-family:monospace; text-align:center; padding:5px;">
+              FAILED TO LOAD ${part.toUpperCase()}.HTML (${err.message})
+            </div>`;
+        });
+    });
+  </script>
+</body>
+</html>

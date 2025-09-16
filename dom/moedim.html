@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Mo’edim – Appointed Times of YHVH</title>
+  <meta name="description" content="A Paleo-Messianic study of the Mo’edim (appointed times) of YHVH, their prophetic meaning, and how they guide Derech Olam in living Torah truth.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header">
+    <h1 style="color:wheat; font-family:monospace; text-align:center;">
+      Derech Olam Ministries
+    </h1>
+  </div>
+
+  <div id="nav">
+    <nav style="text-align:center; margin:10px; font-family:monospace;">
+      <a href="../index.html" style="color:lightgreen; margin:0 10px;">Home</a>
+      <a href="../index2.html" style="color:lightgreen; margin:0 10px;">Resource Library</a>
+      <a href="../about.html" style="color:lightgreen; margin:0 10px;">About</a>
+      <a href="../contact.html" style="color:lightgreen; margin:0 10px;">Contact</a>
+    </nav>
+  </div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">The Mo’edim – Appointed Times of YHVH</h2>
+    <p>
+      The word <strong>Mo’edim</strong> (מוֹעֲדִים) comes from the root <em>ya’ad</em>,
+      meaning “appointed, designated, set apart.” In Beresith 1:14, YHVH declares
+      that the sun, moon, and stars were placed in the heavens for “signs and for
+      seasons (mo’edim), for days and for years.” These were never merely agricultural
+      markers—they were divine appointments with humanity.
+    </p>
+
+    <h3 style="color:wheat;">The Spring Mo’edim</h3>
+    <ul>
+      <li><strong>Pesach (Passover)</strong> – Deliverance by the blood of the Lamb, fulfilled in Yahusha’s sacrifice.</li>
+      <li><strong>Chag HaMatzot (Unleavened Bread)</strong> – A call to holiness, cleansing sin from our lives.</li>
+      <li><strong>Yom HaBikkurim (First Fruits)</strong> – The resurrection of Yahusha, the first of those raised from the dead.</li>
+      <li><strong>Shavuot (Weeks/Pentecost)</strong> – The giving of Torah at Sinai, and the giving of the Ruach HaQodesh in Yerushalayim.</li>
+    </ul>
+
+    <h3 style="color:wheat;">The Fall Mo’edim</h3>
+    <ul>
+      <li><strong>Yom Teru’ah (Trumpets)</strong> – A call to repentance, heralding the return of the King.</li>
+      <li><strong>Yom Kippur (Day of Atonement)</strong> – A day of judgment and reconciliation with YHVH.</li>
+      <li><strong>Sukkot (Tabernacles)</strong> – The joy of dwelling with YHVH, looking ahead to the Messianic Kingdom.</li>
+    </ul>
+
+    <h3 style="color:wheat;">Mo’edim and Prophecy</h3>
+    <p>
+      Each Mo’ed is a prophetic rehearsal. The spring festivals point to the first
+      coming of Yahusha, while the fall festivals point to His return and reign.
+      Living by these Mo’edim aligns Derech Olam with the rhythm of heaven.
+    </p>
+
+    <blockquote style="color:lightgreen; border-left:2px solid wheat; padding-left:10px;">
+      “These are the appointed feasts of YHVH, holy convocations, which you shall
+      proclaim at their appointed time.” (Vayikra / Leviticus 23:4)
+    </blockquote>
+
+    <h3 style="color:wheat;">Conclusion</h3>
+    <p>
+      The Mo’edim are not “Jewish holidays” nor “obsolete rituals.” They are eternal
+      appointments of YHVH, rooted in Torah and fulfilled in Yahusha. As Derech Olam
+      Ministries, we embrace them as both memorials and prophetic rehearsals of the
+      coming Kingdom. To walk in them is to walk in the light of the Tree of Life,
+      rejecting the counterfeit calendars and systems of men.
+    </p>
+  </main>
+
+  <div id="footer">
+    <footer style="text-align:center; margin:20px; font-family:monospace; color:lightgreen;">
+      &copy; 2025 Derech Olam Ministries. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(err => {
+          document.getElementById(part).innerHTML =
+            `<div style="color:red; font-family:monospace; text-align:center; padding:5px;">
+              FAILED TO LOAD ${part.toUpperCase()}.HTML (${err.message})
+            </div>`;
+        });
+    });
+  </script>
+</body>
+</html>

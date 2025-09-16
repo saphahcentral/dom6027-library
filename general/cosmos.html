@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Cosmos and Its Wonders: Galaxies, Stars, and Nebulae</title>
+  <meta name="description" content="Exploring the cosmos — galaxies, stars, nebulae, and cosmic phenomena that reveal the universe’s structure, evolution, and beauty." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">The Cosmos and Its Wonders: Galaxies, Stars, and Nebulae</h2>
+
+    <p>
+      The cosmos is an immense expanse filled with galaxies, stars, nebulae, and cosmic phenomena that captivate the imagination. Galaxies, such as the Milky Way, contain billions of stars, each potentially hosting planetary systems. Nebulae are stellar nurseries, where gas and dust coalesce to form new stars. Observing these celestial objects helps astronomers understand the lifecycle of stars, galactic evolution, and the origins of the universe itself.
+    </p>
+
+    <p>
+      Telescopes like Hubble and James Webb have revealed intricate structures, distant galaxies, and exoplanets. Studying the cosmos not only expands our knowledge of physics and cosmology but also inspires philosophical and spiritual reflection on humanity’s place in the universe. For researchers and enthusiasts, exploring the cosmos is a journey of discovery, wonder, and awe.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> cosmos, galaxies, stars, nebulae, astronomy, space exploration, universe</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

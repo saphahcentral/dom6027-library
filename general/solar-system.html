@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exploring the Solar System: Planets, Moons, and Mysteries</title>
+  <meta name="description" content="Discover the planets, moons, asteroids, and mysteries of our solar system — understanding planetary formation, life potential, and cosmic dynamics." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Exploring the Solar System: Planets, Moons, and Mysteries</h2>
+
+    <p>
+      The solar system is a vast and fascinating place, containing eight planets, their moons, asteroids, comets, and countless smaller bodies. From Mercury’s scorching surface to Neptune’s icy expanse, each planet offers unique features and mysteries. Jupiter’s massive storms, Saturn’s rings, and the intricate dance of moons reveal dynamic gravitational forces. Missions such as Voyager, Cassini, and the Mars rovers have vastly expanded human knowledge, yet countless secrets remain waiting for discovery.
+    </p>
+
+    <p>
+      Studying the solar system inspires curiosity about the cosmos and humanity’s place in it. Observations of exoplanets, asteroid belts, and dwarf planets like Pluto continue to challenge our understanding of planetary science. For researchers, enthusiasts, and students alike, the solar system is a laboratory of extremes, offering endless opportunities to learn, explore, and marvel at the universe’s complexity.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> solar system, planets, moons, astronomy, planetary science, space exploration, asteroids, comets, exoplanets</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

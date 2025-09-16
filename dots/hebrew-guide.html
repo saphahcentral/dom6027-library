@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Free PDF Guide: Training in Paleo-Hebrew Alphabeta and Numbers</title>
+  <meta name="description" content="A concise guide to the Paleo-Hebrew alphabeta and numeric values — great for beginners and teachers. Includes practice suggestions and download pointers." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Free PDF Guide: Paleo-Hebrew Alphabeta & Numbers</h2>
+
+    <p>
+      This guide introduces the Paleo-Hebrew letters and their number values (gematria). It is designed for teachers and students: clear charts, suggested exercises, and a short practice plan to internalize letters and numerical symbolism.
+    </p>
+
+    <h3 style="color:wheat;">What’s in the Guide</h3>
+    <ul>
+      <li>Alphabet chart with pictographic notes and transliteration</li>
+      <li>Numeric values and brief notes on symbolic uses</li>
+      <li>Practice drills and short verse exercises</li>
+      <li>Suggested readings and printable worksheets</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> paleo-hebrew alphabeta, hebrew numbers, free pdf guide, language study, alphabeta practice</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(() => {
+          document.getElementById(part).innerHTML =
+            "<div style='color:red; font-family:monospace;'>[Error loading " + part + "]</div>";
+        });
+    });
+  </script>
+</body>
+</html>

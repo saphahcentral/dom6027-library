@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Signs of the End Times: Observing the Times Biblically</title>
+  <meta name="description" content="A biblical overview of the signs of the end times, comparing prophecy, current events, and the patterns observed from Scripture." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header">Loading header...</div>
+  <div id="nav">Loading navigation...</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Signs of the End Times: Observing the Times Biblically</h2>
+
+    <p>
+      The Torah and the Prophets give clear signs that precede YHVH’s final intervention in history. Observing the cycles, societal moral decline, and upheavals in creation can help believers discern the times. The Bible warns against deception but encourages watchfulness.
+    </p>
+
+    <h3 style="color:wheat;">Key Observations</h3>
+    <ul>
+      <li>Increase in false teachings and corruption of Torah principles</li>
+      <li>Wars, natural disasters, and social upheavals that echo prophecy</li>
+      <li>Global alliances and powers shifting in ways Scripture describes</li>
+      <li>Signs in the heavens — celestial indicators tied to appointed times</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> end times, biblical prophecy, signs of Messiah, watchfulness, Torah-based prophecy</p>
+  </main>
+
+  <div id="footer">Loading footer...</div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error("Cannot load " + part);
+          return response.text();
+        })
+        .then(function(html){ document.getElementById(part).innerHTML = html; })
+        .catch(function(error){
+          document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

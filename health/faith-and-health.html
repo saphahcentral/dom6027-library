@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Faith and Health: Living in Covenant Wellness</title>
+  <meta name="description" content="Learn how faith, Torah obedience, and natural health practices integrate to sustain body and spirit." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Faith and Health: Living in Covenant Wellness</h2>
+
+    <p>
+      Spiritual health influences physical health. Scripture encourages believers to honor their bodies as YHVH’s temple. Observing Torah dietary laws, keeping the Shabbat, and trusting in YHVH’s provision all contribute to holistic well-being. Faith strengthens the immune system through peace, gratitude, and joy.
+    </p>
+
+    <h3 style="color:wheat;">Steps for Covenant Wellness</h3>
+    <ul>
+      <li>Follow clean and wholesome eating guidelines</li>
+      <li>Rest according to Torah rhythms, including Shabbat</li>
+      <li>Practice daily prayer and gratitude</li>
+      <li>Engage in physical activity within creation’s bounds</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> faith and health, covenant wellness, biblical living, Torah lifestyle, holistic wellness</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

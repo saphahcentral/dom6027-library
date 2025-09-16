@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Covenant Thread: From Genesis to Revelation</title>
+  <meta name="description" content="Tracing the covenant thread from Genesis to Revelation, showing YHVH’s unbroken plan of redemption fulfilled in Messiah Yahusha.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header">
+    <h1 style="color:wheat; font-family:monospace; text-align:center;">
+      Derech Olam Ministries
+    </h1>
+  </div>
+
+  <div id="nav">
+    <nav style="text-align:center; margin:10px; font-family:monospace;">
+      <a href="../index.html" style="color:lightgreen; margin:0 10px;">Home</a>
+      <a href="../index2.html" style="color:lightgreen; margin:0 10px;">Resource Library</a>
+      <a href="../about.html" style="color:lightgreen; margin:0 10px;">About</a>
+      <a href="../contact.html" style="color:lightgreen; margin:0 10px;">Contact</a>
+    </nav>
+  </div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">The Covenant Thread: From Genesis to Revelation</h2>
+
+    <p>
+      Scripture is not a collection of disconnected stories—it is one continuous
+      thread of covenant. From Beresith to Revelation, YHVH reveals His plan of
+      redemption through a series of promises that build on each other without
+      contradiction. This thread weaves history, prophecy, and fulfillment into
+      a single masterpiece.
+    </p>
+
+    <h3 style="color:wheat;">The First Promise – Eden</h3>
+    <p>
+      After the fall, YHVH promised a Seed who would crush the serpent
+      (Beresith 3:15). This was the first covenant declaration, pointing to
+      Messiah Yahusha as the ultimate Redeemer.
+    </p>
+
+    <h3 style="color:wheat;">Covenants Across the Ages</h3>
+    <ul>
+      <li><strong>Noach</strong> – Covenant of preservation, marked by the rainbow.</li>
+      <li><strong>Avraham</strong> – Covenant of land, seed, and blessing to all nations.</li>
+      <li><strong>Mosheh</strong> – Covenant of Torah, the constitution of YHVH’s kingdom.</li>
+      <li><strong>Dawid</strong> – Covenant of kingship, a throne established forever.</li>
+      <li><strong>Renewed Covenant</strong> – Yahusha fulfilling all, writing Torah on hearts.</li>
+    </ul>
+
+    <h3 style="color:wheat;">One Unbroken Thread</h3>
+    <p>
+      Though expressed in stages, these are not separate covenants but one
+      continuous plan. Each layer deepens the former, showing YHVH’s unchanging
+      nature. The covenant thread runs like a scarlet cord through every
+      generation, binding together the promises of YHVH with the faith of His
+      people.
+    </p>
+
+    <blockquote style="color:lightgreen; border-left:2px solid wheat; padding-left:10px;">
+      “For all the promises of Elohim find their Yes in Him. That is why it is
+      through Him that we utter our Amein to Elohim for His glory.”
+      (2 Corinthians 1:20)
+    </blockquote>
+
+    <h3 style="color:wheat;">The Covenant in Messiah</h3>
+    <p>
+      Yahusha did not abolish the covenant thread—He fulfilled and renewed it.
+      The Torah remains, but it is now written on the heart. The kingship
+      remains, but Yahusha reigns forever. The promises remain, but the nations
+      are now grafted in. Covenant is the heartbeat of the Bible, and Messiah is
+      its center.
+    </p>
+
+    <h3 style="color:wheat;">Conclusion</h3>
+    <p>
+      To understand the Bible is to trace this unbroken thread. From Eden to
+      Zion, YHVH has never abandoned His people. Covenant is His chosen way of
+      revealing Himself, and we are called to embrace it fully, walking in faith,
+      obedience, and the hope of eternal life in Messiah.
+    </p>
+  </main>
+
+  <div id="footer">
+    <footer style="text-align:center; margin:20px; font-family:monospace; color:lightgreen;">
+      &copy; 2025 Derech Olam Ministries. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(err => {
+          document.getElementById(part).innerHTML =
+            `<div style="color:red; font-family:monospace; text-align:center; padding:5px;">
+              FAILED TO LOAD ${part.toUpperCase()}.HTML (${err.message})
+            </div>`;
+        });
+    });
+  </script>
+</body>
+</html>

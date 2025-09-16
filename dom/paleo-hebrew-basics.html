@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paleo-Hebrew Basics: Rediscovering the Ancient Tongue of Scripture</title>
+  <meta name="description" content="An introduction to Paleo-Hebrew, the ancient pictographic script of Israel, and why it matters for restoring covenant understanding today.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header">
+    <h1 style="color:wheat; font-family:monospace; text-align:center;">
+      Derech Olam Ministries
+    </h1>
+  </div>
+
+  <div id="nav">
+    <nav style="text-align:center; margin:10px; font-family:monospace;">
+      <a href="../index.html" style="color:lightgreen; margin:0 10px;">Home</a>
+      <a href="../index2.html" style="color:lightgreen; margin:0 10px;">Resource Library</a>
+      <a href="../about.html" style="color:lightgreen; margin:0 10px;">About</a>
+      <a href="../contact.html" style="color:lightgreen; margin:0 10px;">Contact</a>
+    </nav>
+  </div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">Paleo-Hebrew Basics: Rediscovering the Ancient Tongue of Scripture</h2>
+
+    <p>
+      Paleo-Hebrew is the ancient script used by the people of Israel before the
+      Babylonian exile. Unlike the modern square script used in today’s Hebrew
+      Bibles, Paleo-Hebrew was originally pictographic. Each letter carried a
+      symbolic meaning, often tied to daily life, agriculture, or spiritual
+      truths. Rediscovering this script helps us see Scripture through the eyes
+      of the ancients.
+    </p>
+
+    <h3 style="color:wheat;">The Nature of the Script</h3>
+    <p>
+      Each letter in Paleo-Hebrew is more than a sound—it is an image. For
+      example:
+    </p>
+    <ul>
+      <li><strong>Aleph (𐤀)</strong> – shaped like an ox head, symbolizing strength and leadership.</li>
+      <li><strong>Bet (𐤁)</strong> – resembling a house, symbolizing family and dwelling.</li>
+      <li><strong>Shin (𐤔)</strong> – like teeth, representing consuming or devouring.</li>
+    </ul>
+    <p>
+      When read together, these images not only form words but also reinforce
+      deeper truths, reminding readers of covenant concepts embedded in daily
+      life.
+    </p>
+
+    <h3 style="color:wheat;">Scripture in Its Ancient Form</h3>
+    <p>
+      The oldest Hebrew manuscripts, including inscriptions on pottery, seals,
+      and the Dead Sea Scrolls, reveal Paleo-Hebrew as the common script. Torah
+      commands like writing the words on doorposts (Devarim 6:9) were first
+      fulfilled in this form. By studying Paleo-Hebrew, we return closer to the
+      original expression of YHVH’s Word.
+    </p>
+
+    <blockquote style="color:lightgreen; border-left:2px solid wheat; padding-left:10px;">
+      “Stand by the roads, and look, and ask for the ancient paths, where the
+      good way is; and walk in it, and find rest for your souls.”
+      (Yirmeyahu 6:16)
+    </blockquote>
+
+    <h3 style="color:wheat;">Why It Matters Today</h3>
+    <p>
+      Learning Paleo-Hebrew is not merely academic—it is restoration. It
+      reconnects us to the faith of Avraham, Mosheh, and Dawid. For Messianic
+      believers, it deepens prayer, worship, and Scripture study by uncovering
+      layers of meaning often hidden in translation. More importantly, it helps
+      us reclaim the identity YHVH gave His people.
+    </p>
+
+    <h3 style="color:wheat;">Practical Steps to Begin</h3>
+    <ul>
+      <li>Start with the Paleo-Hebrew alphabeta, learning both sounds and symbols.</li>
+      <li>Practice writing verses like the Shema (Devarim 6:4) in Paleo script.</li>
+      <li>Use resources that connect Paleo symbols with Torah study and daily devotion.</li>
+    </ul>
+
+    <h3 style="color:wheat;">Conclusion</h3>
+    <p>
+      Rediscovering Paleo-Hebrew is about more than letters—it is about
+      recovering memory. It revives the voice of the prophets and restores the
+      covenant context of Scripture. As we walk in these ancient paths, we draw
+      closer to YHVH and strengthen our foundation for the days ahead.
+    </p>
+  </main>
+
+  <div id="footer">
+    <footer style="text-align:center; margin:20px; font-family:monospace; color:lightgreen;">
+      &copy; 2025 Derech Olam Ministries. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(err => {
+          document.getElementById(part).innerHTML =
+            `<div style="color:red; font-family:monospace; text-align:center; padding:5px;">
+              FAILED TO LOAD ${part.toUpperCase()}.HTML (${err.message})
+            </div>`;
+        });
+    });
+  </script>
+</body>
+</html>

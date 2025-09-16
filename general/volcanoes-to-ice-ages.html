@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Earth’s Geological History: From Volcanoes to Ice Ages</title>
+  <meta name="description" content="An overview of Earth’s geological history, from volcanic formation and tectonic activity to ice ages and fossil records.">
+  <link rel="stylesheet" href="../main/style.css">
+</head>
+<body>
+
+<div id="header">Loading header...</div>
+<div id="nav">Loading navigation...</div>
+
+<main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+  <h1>Earth’s Geological History: From Volcanoes to Ice Ages</h1>
+
+  <p>
+    Earth’s geological history spans billions of years, shaped by volcanic activity, plate tectonics, erosion, and climate changes. Volcanoes formed continents and islands, while earthquakes and shifting plates reshaped landscapes. Ice ages created glaciers that sculpted valleys and transported rocks over vast distances. Sedimentary layers preserve fossils, revealing ancient life and environmental conditions.
+  </p>
+
+  <p>
+    Studying Earth’s geological past helps scientists predict natural hazards, locate mineral resources, and understand climate evolution. For researchers, the planet’s history is a record of dynamic forces and life’s resilience. By examining rocks, fossils, and formations, humanity gains insight into the processes that shaped the world we inhabit today.
+  </p>
+
+  <p style="margin-top:18px;"><strong>SEO Keywords:</strong> geology, volcanoes, ice ages, plate tectonics, fossils, Earth history, climate evolution</p>
+</main>
+
+<div id="footer">Loading footer...</div>
+
+<script>
+  ["header","nav","footer"].forEach(function(part){
+    fetch("../main/" + part + ".html")
+      .then(function(response){
+        if(!response.ok) throw new Error("Cannot load " + part);
+        return response.text();
+      })
+      .then(function(html){ document.getElementById(part).innerHTML = html; })
+      .catch(function(error){
+        document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
+        console.error(error);
+      });
+  });
+</script>
+
+</body>
+</html>

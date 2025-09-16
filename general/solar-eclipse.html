@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Solar Eclipse Phenomenon</title>
+  <meta name="description" content="A detailed look at solar eclipses — total, partial, and annular — their scientific explanation, history, and observational significance." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">The Solar Eclipse Phenomenon</h2>
+
+    <p>
+      A solar eclipse occurs when the Moon passes between the Earth and the Sun, temporarily obscuring the Sun’s light. Total eclipses reveal the Sun’s corona, a magnificent halo of plasma, while partial and annular eclipses offer partial coverage. Eclipses have fascinated humanity for millennia, inspiring myths, scientific inquiry, and awe.
+    </p>
+
+    <p>
+      Modern astronomy allows precise predictions of eclipses, enabling researchers and enthusiasts to study the Sun’s atmosphere, solar flares, and their effects on Earth. Solar eclipses offer educational opportunities, highlight celestial mechanics, and remind humanity of the intricate choreography of our solar system.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> solar eclipse, total eclipse, partial eclipse, annular eclipse, Sun’s corona, astronomy, celestial events</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

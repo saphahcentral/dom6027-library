@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Herbs for Healing: God’s Remedies in Nature</title>
+  <meta name="description" content="Exploring natural healing through herbs and plants created by YHVH, and their use for health and wellness." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Herbs for Healing: God’s Remedies in Nature</h2>
+
+    <p>
+      YHVH created herbs and plants to heal mankind. From the leaves of certain trees to roots and seeds, each element can provide nourishment and remedy for illness. Scripture often references plants as sustenance and medicine. By understanding their properties, we can live healthier lives aligned with Torah wisdom.
+    </p>
+
+    <h3 style="color:wheat;">Commonly Studied Healing Herbs</h3>
+    <ul>
+      <li>Aloe: Soothes burns and promotes skin health</li>
+      <li>Frankincense: Supports immune function and respiratory wellness</li>
+      <li>Myrrh: Antiseptic properties and spiritual significance</li>
+      <li>Mint: Eases digestion and refreshes the mind</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> natural healing, herbs, Torah health, biblical remedies, YHVH’s creation</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

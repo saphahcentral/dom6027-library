@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Helpdesk Basics: Supporting Your Users Effectively</title>
+  <meta name="description" content="Learn the basics of helpdesk management and user support from a structured and professional perspective." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Helpdesk Basics: Supporting Your Users Effectively</h2>
+
+    <p>
+      A helpdesk is the first point of contact for users seeking technical assistance. Establishing a clear system ensures requests are handled efficiently. Effective helpdesk management reduces frustration, improves resolution times, and strengthens trust between the service provider and users.
+    </p>
+
+    <h3 style="color:wheat;">Key Elements of a Helpdesk</h3>
+    <ul>
+      <li>Ticket tracking for every user request</li>
+      <li>Prioritization and escalation rules</li>
+      <li>Clear communication with users</li>
+      <li>Documentation of recurring issues for future reference</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> helpdesk basics, user support, ticketing system, service management, technical assistance</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

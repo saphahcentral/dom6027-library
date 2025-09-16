@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Solar System: Planets, Moons, and Asteroids</title>
+  <meta name="description" content="An overview of the solar system including the Sun, planets, moons, asteroids, and exploration missions — understanding planetary formation and life potential." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">The Solar System: Planets, Moons, and Asteroids</h2>
+
+    <p>
+      The solar system consists of the Sun, eight planets, their moons, and numerous smaller objects such as asteroids and comets. Mercury, Venus, Earth, and Mars are terrestrial planets, while Jupiter, Saturn, Uranus, and Neptune are gas and ice giants. Moons like Titan, Europa, and Ganymede exhibit unique features, some with potential subsurface oceans. Asteroids and comets provide clues about the early formation of the solar system.
+    </p>
+
+    <p>
+      Exploration missions, such as Voyager, Cassini, and Juno, have expanded our understanding of planetary composition, atmosphere, and magnetic fields. Observing the solar system aids in studying planetary formation, climate, and potential for life. It also inspires humanity to explore beyond our home planet and understand our place in the universe.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> solar system, planets, moons, asteroids, comets, planetary science, space exploration, Voyager, Cassini, Juno</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

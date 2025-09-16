@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How to Study Torah Effectively: A Step-by-Step Guide</title>
+  <meta name="description" content="Practical, step-by-step methods to study Torah with depth and discipline — prayer, context, language, Paleo-Hebrew insight, and application for discipleship." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; text-align:left; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">How to Study Torah Effectively: A Step-by-Step Guide</h2>
+
+    <p>
+      Torah study is a discipline that forms character, sharpens judgment, and
+      anchors the heart in covenant truth. This guide gives practical steps you
+      can use today to study with depth — not merely for information, but for
+      transformation. These steps blend prayer, historical context, language work
+      (including Paleo-Hebrew insight), and everyday application so that learning
+      becomes living.
+    </p>
+
+    <h3 style="color:wheat;">1 — Begin in Prayer</h3>
+    <p>
+      Always start with prayer. Ask YHVH for clarity, humility, and discernment.
+      A brief invocation prepares the heart to receive, prevents pride, and
+      opens the mind to the Spirit’s guidance while you work through the text.
+    </p>
+
+    <h3 style="color:wheat;">2 — Read the Passage Slowly (Multiple Times)</h3>
+    <p>
+      Read the passage three times aloud: first for the plain reading, second to
+      notice repetitions and structure, third to listen for questions the text
+      raises. Slow, repeated reading reveals patterns and emphases lost in haste.
+    </p>
+
+    <h3 style="color:wheat;">3 — Understand Context (Literary & Historical)</h3>
+    <p>
+      Determine the immediate context (the verses before and after), the book’s
+      purpose, and the historical setting. Ask: who is speaking, to whom, and why?
+      Knowing when an author wrote and why prevents reading later ideas back into
+      an earlier text.
+    </p>
+
+    <h3 style="color:wheat;">4 — Work the Language</h3>
+    <p>
+      Pay attention to key Hebrew words. If possible, check the original Hebrew
+      wording, basic roots, and usages. For Paleo-Hebrew students, examine how a
+      pictographic sense of a word (its ancient letter-forms) may add a layer of
+      meaning that clarifies metaphor and motive.
+    </p>
+
+    <h3 style="color:wheat;">5 — Compare Translations & Ancient Witnesses</h3>
+    <p>
+      Compare two or three trusted translations plus any available ancient
+      witnesses (e.g., Septuagint, Samaritan readings). Differences reveal
+      interpretive choices; note where translators differ and why.
+    </p>
+
+    <h3 style="color:wheat;">6 — Ask the Right Questions</h3>
+    <ul>
+      <li>What did the original audience hear in these words?</li>
+      <li>What commands, promises, or warnings are present?</li>
+      <li>How does this connect to the covenant thread and Messianic fulfilment?</li>
+    </ul>
+
+    <h3 style="color:wheat;">7 — Use Structured Tools</h3>
+    <p>
+      Keep a study notebook: record observations, cross-references, and insights.
+      Use a concordance, lexicon, and interlinear where available. For group study,
+      prepare short handouts with key verses and questions to prompt discussion.
+    </p>
+
+    <h3 style="color:wheat;">8 — Apply (Personal & Communal)</h3>
+    <p>
+      Every insight must lead to application. How will this passage affect your
+      obedience, your worship, or your community leadership? Write one practical
+      step you and your fellow learners can take this week.
+    </p>
+
+    <h3 style="color:wheat;">9 — Teach and Test</h3>
+    <p>
+      Teaching what you’ve learned is the best test of understanding. Prepare a
+      short 5–10 minute teaching or a written summary. Invite feedback and allow
+      Scripture to correct your conclusions.
+    </p>
+
+    <h3 style="color:wheat;">10 — Build a Weekly Rhythm</h3>
+    <p>
+      Commit to a regular plan: short daily readings, one medium study day, and a
+      deeper weekly session for language work or research. Consistency wins over
+      intensity—steady engagement forms disciple-makers.
+    </p>
+
+    <h3 style="color:wheat;">Recommended Resources</h3>
+    <ul>
+      <li>Interlinear Hebrew texts and basic lexicons</li>
+      <li>Paleo-Hebrew charts for pictographic study</li>
+      <li>Reliable commentaries focused on historical and covenantal reading</li>
+    </ul>
+
+    <h3 style="color:wheat;">Closing</h3>
+    <p>
+      Torah study is a pilgrimage: it changes the one who walks it. Move from
+      information to formation — let prayer, language, context, and application
+      shape your life. As you study, guard humility, test every idea by Scripture,
+      and remain connected to the covenant community so learning becomes faithful
+      obedience.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> Torah Study, Bible Learning, Messianic Education, Paleo-Hebrew, Discipleship</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(r){ return r.text(); })
+        .then(function(d){ 
+          var el = document.getElementById(part); 
+          if(el) el.innerHTML = d; 
+        })
+        .catch(function(){ 
+          var el = document.getElementById(part); 
+          if(el) el.innerHTML = "<div style='color:red; font-weight:bold;'>FAILED TO LOAD " + part.toUpperCase() + "</div>"; 
+        });
+    });
+  </script>
+</body>
+</html>

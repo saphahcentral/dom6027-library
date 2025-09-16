@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coral Reefs: Marine Biodiversity Hotspots</title>
+  <meta name="description" content="Explore coral reefs — rich marine ecosystems that support biodiversity, provide coastal protection, and face environmental threats." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Coral Reefs: Marine Biodiversity Hotspots</h2>
+
+    <p>
+      Coral reefs are among the most diverse ecosystems on Earth. Found in shallow, warm waters, they host thousands of species of fish, invertebrates, and plants. Coral polyps build calcium carbonate skeletons that create intricate reef structures, providing shelter, food, and breeding grounds for marine life.
+    </p>
+
+    <p>
+      Threats to coral reefs include climate change, ocean acidification, overfishing, and pollution. Conservation efforts aim to protect and restore these ecosystems, recognizing their importance for biodiversity, coastal protection, and livelihoods. Studying coral reefs enhances understanding of marine ecology and emphasizes humanity’s responsibility to preserve natural wonders.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> coral reefs, marine biodiversity, reef conservation, ocean ecology, marine ecosystems</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

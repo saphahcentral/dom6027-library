@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>End Time Deceptions: Recognizing Falsehood in the Last Days</title>
+  <meta name="description" content="A study on the spiritual and doctrinal deceptions in the last days, tracing influences from Beresith to present." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header">Loading header...</div>
+  <div id="nav">Loading navigation...</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">End Time Deceptions: Recognizing Falsehood in the Last Days</h2>
+
+    <p>
+      Scripture warns that in the last days, deception will be widespread. From corrupted teachings to spiritual counterfeits, God’s people are called to discern truth. Observing history and Scripture together exposes patterns of error that persist through time.
+    </p>
+
+    <h3 style="color:wheat;">Historical Patterns</h3>
+    <ul>
+      <li>Early distortions of covenant law and Torah observance</li>
+      <li>Introduction of foreign doctrines and idolatry</li>
+      <li>Modern influences echoing ancient errors</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> end times, deceptions, false teachings, biblical discernment, Torah integrity</p>
+  </main>
+
+  <div id="footer">Loading footer...</div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error("Cannot load " + part);
+          return response.text();
+        })
+        .then(function(html){ document.getElementById(part).innerHTML = html; })
+        .catch(function(error){
+          document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

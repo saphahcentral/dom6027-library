@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Building a Ministry Website: Practical Training for Beginners</title>
+  <meta name="description" content="A practical primer for building a simple, secure, and effective ministry website that shares Torah teaching and connects community." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; text-align:left; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Building a Ministry Website: Practical Training for Beginners</h2>
+
+    <p>
+      A ministry website should be clear, secure, and mission-focused. It does not need to be complex to be effective. Start with mission clarity, simple navigation, and reliable hosting.
+    </p>
+
+    <h3 style="color:wheat;">Core Pages to Include</h3>
+    <ul>
+      <li>Home – clear mission statement and calls to action</li>
+      <li>Resources – sermon notes, articles, downloadable guides (Paleo-Hebrew PDFs)</li>
+      <li>Contact – secure form and clear response times</li>
+      <li>Support – donation info and transparency policies</li>
+    </ul>
+
+    <h3 style="color:wheat;">Security & Maintenance</h3>
+    <p>
+      Keep software up to date, enable backups, and use strong authentication. Plan a simple content calendar and appoint someone to maintain uploads and corrections.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> ministry website, web design, faith website, online ministry, site security</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => r.text())
+        .then(d => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = d;
+        })
+        .catch(() => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = "<div style='color:red; padding:4px;'>FAILED TO LOAD " + part + ".html</div>";
+        });
+    });
+  </script>
+</body>
+</html>

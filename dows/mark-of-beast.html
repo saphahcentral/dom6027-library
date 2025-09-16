@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Mark of the Beast: Understanding Scripture’s Warning</title>
+  <meta name="description" content="Analysis of the mark of the beast, how it relates to prophecy, control systems, and end-time deception." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header">Loading header...</div>
+  <div id="nav">Loading navigation...</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">The Mark of the Beast: Understanding Scripture’s Warning</h2>
+
+    <p>
+      The mark of the beast is a prophetic symbol warning God’s people to remain separate from deception. It represents allegiance to worldly powers and systems contrary to the Torah and covenant faith. Recognizing signs, both spiritual and social, helps believers resist being misled.
+    </p>
+
+    <h3 style="color:wheat;">Practical Observations</h3>
+    <ul>
+      <li>Economic or social systems that coerce worship or obedience</li>
+      <li>Signs in technology and identity control that align with prophetic patterns</li>
+      <li>Spiritual deception promoting false messiahs or counterfeit worship</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> mark of the beast, prophecy, end times, biblical warning, spiritual deception</p>
+  </main>
+
+  <div id="footer">Loading footer...</div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error("Cannot load " + part);
+          return response.text();
+        })
+        .then(function(html){ document.getElementById(part).innerHTML = html; })
+        .catch(function(error){
+          document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

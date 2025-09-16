@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Spiritual Wellness: Aligning Body and Spirit</title>
+  <meta name="description" content="Connecting spiritual practices, prayer, and Torah-guided lifestyle to overall health and wellness." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Spiritual Wellness: Aligning Body and Spirit</h2>
+
+    <p>
+      Spiritual wellness is foundational for health. Torah-based living, prayer, meditation, and reverence for YHVH sustain both mind and body. Holistic health integrates proper diet, rest, and trust in divine guidance. When body and spirit are aligned, believers experience resilience, vitality, and peace.
+    </p>
+
+    <h3 style="color:wheat;">Practices to Foster Spiritual Wellness</h3>
+    <ul>
+      <li>Daily meditation on Scripture and YHVH’s promises</li>
+      <li>Integrating prayer with healthy lifestyle choices</li>
+      <li>Regular rest, reflection, and Sabbath observance</li>
+      <li>Using natural foods, herbs, and spices intentionally</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> spiritual wellness, Torah health, biblical practices, natural living, holistic faith</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

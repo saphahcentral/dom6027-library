@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Return of Yahusha: Hope for the Faithful</title>
+  <meta name="description" content="Exploring the promises and signs of Messiah Yahusha’s return, including covenantal hope, prophecy fulfillment, and spiritual preparation." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">The Return of Yahusha: Hope for the Faithful</h2>
+
+    <p>
+      Yahusha’s return is the central hope of covenant people. Scripture outlines clear indicators, prophetic fulfillment, and the call for readiness. Believers are encouraged to walk in obedience, prayer, and watchfulness, aligning with Torah and covenant principles.
+    </p>
+
+    <h3 style="color:wheat;">Preparation Guidelines</h3>
+    <ul>
+      <li>Strengthen knowledge of Torah and Prophets</li>
+      <li>Maintain covenantal holiness in daily life</li>
+      <li>Encourage and build up the covenant community</li>
+      <li>Recognize and avoid spiritual deception</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> Yahusha return, Messiah, prophecy fulfillment, end times hope, covenant preparation</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if(!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(() => {
+          document.getElementById(part).innerHTML =
+            "<div style='color:red; font-family:monospace;'>[Error loading " + part + "]</div>";
+        });
+    });
+  </script>
+</body>
+</html>

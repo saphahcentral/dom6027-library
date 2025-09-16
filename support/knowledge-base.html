@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Knowledge Base: Empower Users with Self-Service</title>
+  <meta name="description" content="Build a knowledge base to reduce support requests and empower users to find solutions independently." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Knowledge Base: Empower Users with Self-Service</h2>
+
+    <p>
+      A well-organized knowledge base reduces repetitive support requests by providing users with clear, searchable guides. It promotes self-service, which frees support staff for complex issues while improving user satisfaction.
+    </p>
+
+    <h3 style="color:wheat;">Elements of an Effective Knowledge Base</h3>
+    <ul>
+      <li>Step-by-step guides with clear screenshots</li>
+      <li>Frequently Asked Questions (FAQ) section</li>
+      <li>Regular updates to reflect changes and new solutions</li>
+      <li>Searchable categories and topics for easy navigation</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> knowledge base, self-service support, helpdesk guides, FAQ management, user empowerment</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

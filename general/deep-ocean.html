@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Deep Ocean: Life in the Abyss</title>
+  <meta name="description" content="Exploring the deep ocean, its unique ecosystems, extreme environments, and remarkable adaptations of life in the abyss." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">The Deep Ocean: Life in the Abyss</h2>
+
+    <p>
+      The deep ocean is one of the least explored frontiers on Earth. Extending thousands of meters below the surface, it is home to unique ecosystems, bioluminescent creatures, and extreme environments. Pressures are immense, temperatures low, and sunlight is nonexistent, yet life thrives in remarkable adaptations. Giant squid, anglerfish, and deep-sea corals demonstrate the diversity and resilience of oceanic life. Hydrothermal vents provide energy for chemosynthetic organisms, showing that life can exist without sunlight.
+    </p>
+
+    <p>
+      Studying the deep ocean is essential for understanding biodiversity, climate effects, and the carbon cycle. Advances in submersibles, remote sensing, and deep-sea robotics have allowed scientists to uncover hidden species and behaviors. Conservation of these fragile ecosystems is critical, as human activity, pollution, and climate change threaten these unique habitats.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> deep ocean, abyss, ocean life, bioluminescence, hydrothermal vents, marine biodiversity, ocean conservation</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

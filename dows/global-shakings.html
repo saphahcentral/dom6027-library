@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Global Shakings: Understanding Natural and Societal Upheavals</title>
+  <meta name="description" content="Examining recent and historical global disturbances in light of prophecy — natural disasters, social unrest, and geopolitical shifts." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header">Loading header...</div>
+  <div id="nav">Loading navigation...</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Global Shakings: Understanding Natural and Societal Upheavals</h2>
+
+    <p>
+      Scripture portrays periods of shaking — both in the earth and among nations. Observing these events helps the faithful prepare and discern the times. It is a call to stability in covenant obedience despite external turbulence.
+    </p>
+
+    <h3 style="color:wheat;">Patterns to Note</h3>
+    <ul>
+      <li>Earthquakes, storms, and environmental anomalies</li>
+      <li>Rapid political change or collapse of governments</li>
+      <li>Social unrest indicating moral decay</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> global upheavals, prophecy, natural disasters, end times, societal shaking</p>
+  </main>
+
+  <div id="footer">Loading footer...</div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error("Cannot load " + part);
+          return response.text();
+        })
+        .then(function(html){ document.getElementById(part).innerHTML = html; })
+        .catch(function(error){
+          document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>

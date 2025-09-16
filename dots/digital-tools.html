@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Tools for Torah Study: Using Technology Wisely</title>
+  <meta name="description" content="How to choose and use digital tools for Torah study without letting technology replace discipleship — apps, interlinears, audio, and archiving practices." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Digital Tools for Torah Study: Using Technology Wisely</h2>
+
+    <p>
+      Technology can multiply access to Torah resources, but it must remain a servant — not a substitute — for discipleship. Choose tools that increase understanding, preserve integrity, and encourage community application.
+    </p>
+
+    <h3 style="color:wheat;">Recommended Tool Types</h3>
+    <ul>
+      <li>Interlinear and lexicon apps for language work</li>
+      <li>Audio recordings for pronunciation and prayer practice</li>
+      <li>Note-taking and reference managers for research</li>
+      <li>Private community platforms for secure teaching and feedback</li>
+    </ul>
+
+    <h3 style="color:wheat;">Best Practices</h3>
+    <p>
+      Verify sources, avoid over-reliance on a single tool, and combine digital work with communal reading and discussion. Backup data regularly and protect access to ministry accounts.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> digital torah, bible apps, technology in faith, study software, interlinear</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if(!r.ok) throw new Error("HTTP " + r.status);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(() => {
+          document.getElementById(part).innerHTML =
+            "<div style='color:red; font-family:monospace;'>[Error loading " + part + "]</div>";
+        });
+    });
+  </script>
+</body>
+</html>

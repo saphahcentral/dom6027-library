@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DERECH OLAM MINISTRIES - RESOURCE LIBRARY</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    background-color: black;
+    color: #00FF00;
+    font-family: monospace;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #FFD700;
+  }
+  a.cta {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 12px 20px;
+    font-weight: bold;
+    color: blue;
+    background-color: wheat;
+    text-decoration: underline;
+    transition: all 0.3s;
+  }
+  a.cta:hover {
+    background-color: #FFD700;
+    color: black;
+  }
+  .section {
+    margin: 20px 0;
+    border-bottom: 1px solid #00FF00;
+    padding-bottom: 15px;
+  }
+  .section h2 {
+    margin-top: 0;
+  }
+  .teaser {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #111;
+    border-left: 4px solid #00FF00;
+  }
+</style>
+</head>
+<body>
+
+<!-- Dynamic Header -->
+<div id="header"></div>
+
+<!-- Dynamic Nav -->
+<div id="nav"></div>
+
+<!-- Main Content -->
+<main>
+  <h1>Welcome to Derech Olam Ministries Resource Library</h1>
+  <p>
+    Explore our extensive Resource Library, carefully organized into five key sections to support your study and growth:
+  </p>
+
+  <div class="section">
+    <h2>DOM: Derech Olam Ministries International</h2>
+    <div class="teaser">
+      Discover articles, teachings, and resources focused on Derech Olam Ministries worldwide.  
+      <a href="dom/index.html" class="cta">Explore DOM &raquo;</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>DOTS: Derech Olam Training Services</h2>
+    <div class="teaser">
+      Training guides, leadership insights, and personal development resources for our community.  
+      <a href="dots/index.html" class="cta">Explore DOTS &raquo;</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>DOWS: Derech Olam Warning Services</h2>
+    <div class="teaser">
+      Critical alerts, warnings, and messages for spiritual awareness and preparedness.  
+      <a href="dows/index.html" class="cta">Explore DOWS &raquo;</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>HEALTH: SOAR Natural Health Library</h2>
+    <div class="teaser">
+      Health guides, natural remedies, and wellness tips for body and mind.  
+      <a href="health/index.html" class="cta">Explore Health &raquo;</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>GENERAL: Other Important Articles</h2>
+    <div class="teaser">
+      Various articles of interest, covering general knowledge, inspiration, and study aids.  
+      <a href="general/index.html" class="cta">Explore General &raquo;</a>
+    </div>
+  </div>
+
+  <p>
+    Or browse the full Resource Index below:
+  </p>
+  <a href="index2.html" class="cta">Go to Resource Index &raquo;</a>
+</main>
+
+<!-- Dynamic Footer -->
+<div id="footer"></div>
+
+<!-- Dynamic Include Script with Fallback -->
+<script>
+["header","nav","footer"].forEach(part => {
+  fetch("main/" + part + ".html")
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.text();
+    })
+    .then(data => document.getElementById(part).innerHTML = data)
+    .catch(error => {
+      document.getElementById(part).innerHTML = `<div style="color:red; font-family:monospace; padding:10px;">FAILED TO LOAD ${part.toUpperCase()}.HTML</div>`;
+      console.error(`Error loading ${part}.html:`, error);
+    });
+});
+</script>
+
+</body>
+</html>

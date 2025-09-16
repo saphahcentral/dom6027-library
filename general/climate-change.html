@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Climate Change and Its Global Impact</title>
+  <meta name="description" content="Understand climate change, its causes, impacts on the planet, and strategies for mitigation and adaptation." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Climate Change and Its Global Impact</h2>
+
+    <p>
+      Climate change results from human activities and natural processes that alter the Earth’s atmosphere and climate system. Rising greenhouse gas levels cause global temperatures to increase, leading to melting glaciers, sea-level rise, extreme weather events, and biodiversity loss. Ecosystems, agriculture, and human settlements are significantly affected by these shifts.
+    </p>
+
+    <p>
+      Scientific research highlights the importance of reducing carbon emissions, protecting forests, and transitioning to renewable energy. Understanding climate change empowers policymakers, researchers, and communities to develop adaptation strategies and mitigate adverse effects. Studying this phenomenon provides insight into the interconnectedness of natural systems and the responsibility of humanity to safeguard the planet.
+    </p>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> climate change, global warming, environmental impact, sustainability, carbon emissions</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(function(response){
+          if(!response.ok) throw new Error(part + " not found");
+          return response.text();
+        })
+        .then(function(data){
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = data;
+        })
+        .catch(function(error){
+          console.warn(error.message);
+          var el = document.getElementById(part);
+          if(el) el.innerHTML = "<p style='color:red; font-family:monospace;'>Failed to load " + part + "</p>";
+        });
+    });
+  </script>
+</body>
+</html>

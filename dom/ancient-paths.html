@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restoring the Ancient Paths: Why Paleo-Messianic Faith Matters Today</title>
+  <meta name="description" content="Returning to ancient faith practices restores authenticity and connects believers to YHVH’s original intent.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header">FAILED TO LOAD HEADER</div>
+  <div id="nav">FAILED TO LOAD NAVIGATION</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">Restoring the Ancient Paths: Why Paleo-Messianic Faith Matters Today</h2>
+    <p>
+      Jeremiah 6:16 calls believers to seek the ancient paths where the good way lies. 
+      In modern times, many have forgotten the foundations of faith. Paleo-Messianic 
+      practice restores the original context of Scripture, including its language, 
+      culture, and worship. Returning to ancient paths does not mean living in the past, 
+      but reclaiming authenticity and alignment with YHVH’s intent. By embracing these 
+      practices, believers avoid traditions that obscure the Torah’s truth. Restoration 
+      strengthens identity, provides stability, and prepares the covenant community 
+      for Messiah’s return. Walking the ancient paths reconnects the faithful with the 
+      rhythm, teachings, and devotion of the earliest followers of YHVH.
+    </p>
+  </main>
+
+  <div id="footer">FAILED TO LOAD FOOTER</div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("Failed to fetch " + part);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(() => document.getElementById(part).innerHTML = "FAILED TO LOAD " + part.toUpperCase());
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messianic Havdalah: Restoring the Biblical Closing of Shabbat</title>
+  <meta name="description" content="Havdalah marks the end of Shabbat and the beginning of a new week. In Messianic practice, it restores the biblical intent of separation and sanctification.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div id="header">FAILED TO LOAD HEADER</div>
+  <div id="nav">FAILED TO LOAD NAVIGATION</div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00;">
+    <h2 style="color:wheat;">Messianic Havdalah: Restoring the Biblical Closing of Shabbat</h2>
+    <p>
+      Havdalah is the ceremony marking the conclusion of Shabbat, separating the holy from the ordinary. 
+      In Messianic communities, it brings renewed understanding of YHVH’s rhythms. Blessings are spoken 
+      over wine, aromatic spices, and a braided candle, symbolizing joy, remembrance, and the light of 
+      Messiah. This ritual is more than tradition—it reminds believers to carry holiness into the new 
+      week, living in alignment with YHVH’s appointed times. Havdalah also points forward to ultimate 
+      redemption, illustrating the separation of light from darkness that Messiah will accomplish. 
+      Practicing this ceremony restores meaning, connects families, and strengthens covenant faith.
+    </p>
+
+    <h3 style="color:wheat;">Key Elements of Havdalah</h3>
+    <ul>
+      <li><strong>Wine:</strong> Symbolizing joy and blessing.</li>
+      <li><strong>Spices:</strong> Representing fragrance and remembrance of the holy.</li>
+      <li><strong>Candle:</strong> The intertwined light points to Messiah, separating light from darkness.</li>
+    </ul>
+
+    <h3 style="color:wheat;">Spiritual Significance</h3>
+    <p>
+      Havdalah is not just ritual; it is a prophetic act. It reminds believers that the sacred must be
+      distinguished from the mundane, and every new week is an opportunity to walk in covenant
+      faithfulness. The ceremony also anticipates the ultimate redemption when YHVH will separate
+      light from darkness permanently through Messiah Yahusha.
+    </p>
+  </main>
+
+  <div id="footer">FAILED TO LOAD FOOTER</div>
+
+  <script>
+    ["header","nav","footer"].forEach(part => {
+      fetch("../main/" + part + ".html")
+        .then(r => {
+          if (!r.ok) throw new Error("Failed to load " + part);
+          return r.text();
+        })
+        .then(d => document.getElementById(part).innerHTML = d)
+        .catch(e => console.error(e));
+    });
+  </script>
+</body>
+</html>

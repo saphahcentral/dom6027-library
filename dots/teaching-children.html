@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Teaching Children Torah: Simple Methods That Work</title>
+  <meta name="description" content="Practical, creative methods to teach Torah to children — songs, stories, crafts, and short memorization routines that build faith and understanding." />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div id="header"></div>
+  <div id="nav"></div>
+
+  <main style="padding:20px; font-family:monospace; color:#00FF00; text-align:left; max-width:900px; margin:0 auto;">
+    <h2 style="color:wheat;">Teaching Children Torah: Simple Methods That Work</h2>
+
+    <p>
+      Children learn best when lessons are memorable and joyful. Use short stories, simple songs, visual aids, and hands-on activities that connect Torah truths to everyday life.
+    </p>
+
+    <h3 style="color:wheat;">Effective Techniques</h3>
+    <ul>
+      <li>Use a single memory verse each week paired with a song or motion.</li>
+      <li>Tell Bible stories with props and clear application questions.</li>
+      <li>Create simple crafts that illustrate covenant themes (ark, tabernacle, festival symbols).</li>
+      <li>Encourage family review during mealtime or before bed to reinforce learning.</li>
+    </ul>
+
+    <p style="margin-top:18px;"><strong>SEO Keywords:</strong> teaching children, torah education, messianic kids, bible teaching, family discipleship</p>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    ["header","nav","footer"].forEach(function(part){
+      fetch("../main/" + part + ".html")
+        .then(r => r.text())
+        .then(d => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = d;
+        })
+        .catch(() => {
+          const el = document.getElementById(part);
+          if (el) el.innerHTML = "<div style='color:red; padding:4px;'>FAILED TO LOAD " + part + ".html</div>";
+        });
+    });
+  </script>
+</body>
+</html>
