@@ -112,7 +112,7 @@
 <!-- Dynamic Include Script with Fallback -->
 <script>
 ["header","nav","footer"].forEach(part => {
-  fetch("main/" + part + ".html")
+  fetch(part + ".html")
     .then(response => {
       if (!response.ok) throw new Error("Network response was not ok");
       return response.text();
