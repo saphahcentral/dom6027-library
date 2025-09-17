@@ -31,19 +31,20 @@
 
   <div id="footer">Loading footer...</div>
 
-  <script>
-    ["header","nav","footer"].forEach(function(part){
-      fetch("../main/" + part + ".html")
-        .then(function(response){
-          if(!response.ok) throw new Error("Cannot load " + part);
-          return response.text();
-        })
-        .then(function(html){ document.getElementById(part).innerHTML = html; })
-        .catch(function(error){
-          document.getElementById(part).innerHTML = "<em>Failed to load " + part + " content.</em>";
-          console.error(error);
-        });
+<script>
+const base = "https://saphahcentral.github.io/dom6027-library/";
+["header","nav","footer"].forEach(part => {
+  fetch(base + part + ".html")
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.text();
+    })
+    .then(data => document.getElementById(part).innerHTML = data)
+    .catch(error => {
+      document.getElementById(part).innerHTML = `<div style="color:red; font-family:monospace; padding:10px;">FAILED TO LOAD ${part.toUpperCase()}.HTML</div>`;
+      console.error(`Error loading ${part}.html:`, error);
     });
-  </script>
+});
+</script>
 </body>
 </html>
