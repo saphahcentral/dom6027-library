@@ -28,16 +28,20 @@
 
   <div id="footer">FAILED TO LOAD FOOTER</div>
 
-  <script>
-    ["header","nav","footer"].forEach(part => {
-      fetch("../main/" + part + ".html")
-        .then(r => {
-          if (!r.ok) throw new Error("Failed to fetch " + part);
-          return r.text();
-        })
-        .then(d => document.getElementById(part).innerHTML = d)
-        .catch(() => document.getElementById(part).innerHTML = "FAILED TO LOAD " + part.toUpperCase());
+<script>
+const base = "https://saphahcentral.github.io/dom6027-library/";
+["header","nav","footer"].forEach(part => {
+  fetch(base + part + ".html")
+    .then(response => {
+      if (!response.ok) throw new Error("Network response was not ok");
+      return response.text();
+    })
+    .then(data => document.getElementById(part).innerHTML = data)
+    .catch(error => {
+      document.getElementById(part).innerHTML = `<div style="color:red; font-family:monospace; padding:10px;">FAILED TO LOAD ${part.toUpperCase()}.HTML</div>`;
+      console.error(`Error loading ${part}.html:`, error);
     });
-  </script>
+});
+</script>
 </body>
 </html>
