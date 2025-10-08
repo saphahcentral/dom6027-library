@@ -3,47 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DERECH OLAM MINISTRIES - RESOURCE LIBRARY</title>
-<link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-internal.css">
-<style>
-  body {
-    background-color: black;
-    color: #00FF00;
-    font-family: monospace;
-    padding: 20px;
-  }
-  h1, h2 {
-    color: #FFD700;
-  }
-  a.cta {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 12px 20px;
-    font-weight: bold;
-    color: blue;
-    background-color: wheat;
-    text-decoration: underline;
-    transition: all 0.3s;
-  }
-  a.cta:hover {
-    background-color: #FFD700;
-    color: black;
-  }
-  .section {
-    margin: 20px 0;
-    border-bottom: 1px solid #00FF00;
-    padding-bottom: 15px;
-  }
-  .section h2 {
-    margin-top: 0;
-  }
-  .teaser {
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #111;
-    border-left: 4px solid #00FF00;
-  }
-</style>
+<title>DERECH OLAM MINISTRIES - Resource Library</title>
+<link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
+<link rel="icon" href="favicon.ico">
 </head>
 <body>
 
@@ -109,21 +71,8 @@
 <!-- Dynamic Footer -->
 <div id="footer"></div>
 
-<!-- Dynamic Include Script with Fallback -->
-<script>
-["header","nav","footer"].forEach(part => {
-  fetch(part + ".html")
-    .then(response => {
-      if (!response.ok) throw new Error("Network response was not ok");
-      return response.text();
-    })
-    .then(data => document.getElementById(part).innerHTML = data)
-    .catch(error => {
-      document.getElementById(part).innerHTML = `<div style="color:red; font-family:monospace; padding:10px;">FAILED TO LOAD ${part.toUpperCase()}.HTML</div>`;
-      console.error(`Error loading ${part}.html:`, error);
-    });
-});
-</script>
+<!-- Include Script -->
+<script src="https://saphahcentral.github.io/saphah/includes-public.js"></script>
 
 </body>
 </html>
