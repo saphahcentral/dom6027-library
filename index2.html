@@ -5,22 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DOM6027 Library Index</title>
   <meta name="description" content="Index of all Derech Olam Ministries library articles.">
-  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-internal.css">
+  <link rel="stylesheet" href="https://saphahcentral.github.io/saphah/style-public.css">
+  <link rel="icon" href="favicon.ico">
 </head>
+
 <body>
   <div id="header">FAILED TO LOAD HEADER</div>
   <div id="nav">FAILED TO LOAD NAVIGATION</div>
 
-  <main style="padding:20px; font-family:monospace; color:#00FF00;">
-    <h1 style="color:wheat;">DOM6027 Library Articles</h1>
+  <main>
+    <h1>DOM6027 Library Articles</h1>
 
     <!-- DOM Section -->
     <h2 style="color:wheat; margin-top:30px;">DOM</h2>
     <table style="width:100%; border-collapse:collapse; margin-top:10px;">
       <thead>
-        <tr style="background-color:wheat; color:black;">
-          <th style="padding:8px; border:1px solid black;">Article Name</th>
-          <th style="padding:8px; border:1px solid black;">Topic / Description</th>
+        <tr>
+          <th>Article Name</th>
+          <th>Topic / Description</th>
         </tr>
       </thead>
       <tbody>
@@ -73,12 +75,12 @@
     </table>
 
     <!-- DOTS Section (Empty) -->
-    <h2 style="color:wheat; margin-top:30px;">DOTS</h2>
+    <h2>DOTS</h2>
     <table style="width:100%; border-collapse:collapse; margin-top:10px;">
       <thead>
-        <tr style="background-color:wheat; color:black;">
-          <th style="padding:8px; border:1px solid black;">Article Name</th>
-          <th style="padding:8px; border:1px solid black;">Topic / Description</th>
+        <tr>
+          <th>Article Name</th>
+          <th>Topic / Description</th>
         </tr>
       </thead>
       <tbody>
@@ -116,12 +118,12 @@
     </table>
 
     <!-- DOWS Section (Empty) -->
-    <h2 style="color:wheat; margin-top:30px;">DOWS</h2>
+    <h2>DOWS</h2>
     <table style="width:100%; border-collapse:collapse; margin-top:10px;">
       <thead>
-        <tr style="background-color:wheat; color:black;">
-          <th style="padding:8px; border:1px solid black;">Article Name</th>
-          <th style="padding:8px; border:1px solid black;">Topic / Description</th>
+        <tr>
+          <th>Article Name</th>
+          <th>Topic / Description</th>
         </tr>
       </thead>
       <tbody>
@@ -164,12 +166,12 @@
     </table>
 
     <!-- HEALTH Section (Empty) -->
-    <h2 style="color:wheat; margin-top:30px;">HEALTH</h2>
+    <h2>HEALTH</h2>
     <table style="width:100%; border-collapse:collapse; margin-top:10px;">
       <thead>
-        <tr style="background-color:wheat; color:black;">
-          <th style="padding:8px; border:1px solid black;">Article Name</th>
-          <th style="padding:8px; border:1px solid black;">Topic / Description</th>
+        <tr>
+          <th>Article Name</th>
+          <th>Topic / Description</th>
         </tr>
       </thead>
       <tbody>
@@ -207,12 +209,12 @@
     </table>
 
     <!-- GENERAL Section (Empty) -->
-    <h2 style="color:wheat; margin-top:30px;">GENERAL</h2>
+    <h2">GENERAL</h2>
     <table style="width:100%; border-collapse:collapse; margin-top:10px;">
       <thead>
-        <tr style="background-color:wheat; color:black;">
-          <th style="padding:8px; border:1px solid black;">Article Name</th>
-          <th style="padding:8px; border:1px solid black;">Topic / Description</th>
+        <tr>
+          <th>Article Name</th>
+          <th>Topic / Description</th>
         </tr>
       </thead>
       <tbody>
@@ -270,12 +272,12 @@
     </table>
 
   <!-- SUPPORT Section -->
-    <h2 style="color:wheat; margin-top:30px;">SUPPORT</h2>
+    <h2>SUPPORT</h2>
     <table style="width:100%; border-collapse:collapse; margin-top:10px;">
       <thead>
-        <tr style="background-color:wheat; color:black;">
-          <th style="padding:8px; border:1px solid black;">Article Name</th>
-          <th style="padding:8px; border:1px solid black;">Topic / Description</th>
+        <tr>
+          <th>Article Name</th>
+          <th>Topic / Description</th>
         </tr>
       </thead>
       <tbody>
@@ -301,21 +303,6 @@
   </main>
 
   <div id="footer">FAILED TO LOAD FOOTER</div>
-
-<script>
-["header","nav","footer"].forEach(part => {
-  fetch(part + ".html")
-    .then(response => {
-      if (!response.ok) throw new Error("Network response was not ok");
-      return response.text();
-    })
-    .then(data => document.getElementById(part).innerHTML = data)
-    .catch(error => {
-      document.getElementById(part).innerHTML = `<div style="color:red; font-family:monospace; padding:10px;">FAILED TO LOAD ${part.toUpperCase()}.HTML</div>`;
-      console.error(`Error loading ${part}.html:`, error);
-    });
-});
-</script>
 
 </body>
 </html>
